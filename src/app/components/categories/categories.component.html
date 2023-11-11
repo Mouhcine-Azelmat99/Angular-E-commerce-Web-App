@@ -1,0 +1,8 @@
+<ul class="list-group mb-3">
+  <li class="list-group-item">
+    <button class="btn btn-link" (click)="changeCategory('all')">All</button>
+  </li>
+  <li class="list-group-item" *ngFor="let cat of categories ">
+    <button class="btn btn-link" (click)="changeCategory(cat)">{{ cat }}</button>
+  </li>
+</ul>

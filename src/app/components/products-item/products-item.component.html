@@ -1,0 +1,18 @@
+<div class="product-item">
+  <div class="card" (click)="showProduct()">
+    <img [src]="product.image" class="card-img-top" alt="...">
+    <div class="card-header">
+      <h6>{{ product.title }}</h6>
+    </div>
+    <div class="card-body">
+      <p style="font-size: 13p
+      x;">{{ product.description }}
+      </p>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <p style="font-weight: bold;">{{ product.price }}$</p>
+        <button class="btn btn-dark">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

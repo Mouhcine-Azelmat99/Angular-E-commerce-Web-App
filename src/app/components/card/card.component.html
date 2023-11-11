@@ -1,0 +1,33 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-list">
+        <div class="card-deck">
+          <div class="d-flex justify-content-between">
+            <p>Total : {{ total }}</p>
+            <button class="btn btn-danger" (click)="order()">Order</button>
+          </div>
+          <hr>
+          <div class="card my-2" *ngFor="let item of cardItems;let i = index">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img class="card-img" [src]="item.product.image" alt="{{ item.product.title }}" width="55%">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.product.title }}</h5>
+                  <p class="card-text">{{ item.product.description }}</p>
+                  <p class="card-text">Category: {{ item.product.category }}</p>
+                  <p class="card-text">Price: ${{ item.product.price }}</p>
+                  <p class="card-text">Quantity: {{ item.qty }}</p>
+                  <button class="btn btn-danger" (click)="remove(i)">Remove</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

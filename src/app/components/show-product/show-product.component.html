@@ -1,0 +1,36 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <img [src]="product.image" class="card-img-top" style="width: 60%;" alt="...">
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header">
+          <h6>{{ product.title }}</h6>
+        </div>
+        <div class="card-body">
+          <p style="font-size: 13p
+          x;">{{ product.description }}
+          </p>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <p style="font-weight: bold;">{{ product.category }}</p>
+          </div>
+          <hr>
+          <label for="qty">Quatity</label>
+          <div class="d-flex my-3">
+            <button class="btn btn-dark" (click)="increment()">+</button>
+            <h3 class="mx-5">{{ qty }}</h3>
+            <button class="btn btn-dark" (click)="decrement()">-</button>
+          </div>
+          <p>Price : {{ product.price*qty }} $</p>
+          <div class="d-grid gap-2">
+            <button (click)="addToCard()" class="btn btn-dark" type="button">Add to Card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
